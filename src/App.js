@@ -1,6 +1,8 @@
 import { Typography, Stack } from '@mui/material';
 
-import { NavBar } from './components';
+import { NavBar, Tab } from './components';
+
+const TAB_ITEMS = ['moon', 'mars', 'europa', 'titan'];
 
 const App = () => {
   return (
@@ -15,6 +17,7 @@ const App = () => {
       <Typography variant="navtext">nav text Hello</Typography>
       <Typography variant="body1">body Hello</Typography>
       <NavBar />
+      <Tab items={TAB_ITEMS} />
     </Stack>
   );
 };
