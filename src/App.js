@@ -1,5 +1,7 @@
 import { Typography, Stack } from '@mui/material';
 
+import { NavBar } from './components';
+
 const App = () => {
   return (
     <Stack spacing={3}>
@@ -12,6 +14,7 @@ const App = () => {
       <Typography variant="subtitle2">subheading 2 Hello</Typography>
       <Typography variant="navtext">nav text Hello</Typography>
       <Typography variant="body1">body Hello</Typography>
+      <NavBar />
     </Stack>
   );
 };
