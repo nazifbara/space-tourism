@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { ThemeProvider, CssBaseline } from '@mui/material';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import theme from './theme';
 
@@ -9,7 +10,9 @@ const Root = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <App />
+      <Router>
+        <App />
+      </Router>
     </ThemeProvider>
   );
 };
