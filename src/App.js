@@ -1,12 +1,12 @@
 import { Typography, Stack } from '@mui/material';
 
-import { NavBar, Tab, DotSlider, NumberSlider } from './components';
+import { NavBar, Tab, DotSlider, NumberSlider, MainButton } from './components';
 
 const TAB_ITEMS = ['moon', 'mars', 'europa', 'titan'];
 
 const App = () => {
   return (
-    <Stack spacing={3}>
+    <Stack alignItems="flex-start" spacing={3}>
       <Typography variant="h1">H1 Hello</Typography>
       <Typography variant="h2">H2 Hello</Typography>
       <Typography variant="h3">H3 Hello</Typography>
@@ -23,6 +23,7 @@ const App = () => {
         onClick={(i) => console.log(`number slider index ${i}`)}
         quantity={3}
       />
+      <MainButton>explore</MainButton>
     </Stack>
   );
 };
