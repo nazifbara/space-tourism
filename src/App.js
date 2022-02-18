@@ -1,6 +1,6 @@
 import { Typography, Stack } from '@mui/material';
 
-import { NavBar, Tab, DotSlider } from './components';
+import { NavBar, Tab, DotSlider, NumberSlider } from './components';
 
 const TAB_ITEMS = ['moon', 'mars', 'europa', 'titan'];
 
@@ -19,6 +19,10 @@ const App = () => {
       <NavBar />
       <Tab onClick={(i) => console.log(`tab index ${i}`)} items={TAB_ITEMS} />
       <DotSlider onClick={(i) => console.log(`dot index ${i}`)} quantity={4} />
+      <NumberSlider
+        onClick={(i) => console.log(`number slider index ${i}`)}
+        quantity={3}
+      />
     </Stack>
   );
 };
