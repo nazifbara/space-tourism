@@ -1,3 +1,4 @@
+export { default as ViewWrapper } from './ViewWrapper';
 export { default as MainButton } from './MainButton';
 export { default as NumberSlider } from './NumberSlider';
 export { default as NavBar } from './NavBar';

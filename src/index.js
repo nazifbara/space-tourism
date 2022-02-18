@@ -4,6 +4,7 @@ import App from './App';
 import { ThemeProvider, CssBaseline } from '@mui/material';
 import { BrowserRouter as Router } from 'react-router-dom';
 
+import './index.css';
 import theme from './theme';
 
 const Root = () => {
