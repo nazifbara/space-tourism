@@ -1,6 +1,6 @@
 import { Stack, Typography } from '@mui/material';
 
-const TabItem = ({ text, active = false }) => {
+const TabItem = ({ text, active = false, onClick }) => {
   return (
     <Typography
       sx={{
@@ -17,6 +17,7 @@ const TabItem = ({ text, active = false }) => {
           borderColor: active ? 'inherit' : 'rgba(255, 255, 255, 0.521)',
         },
       }}
+      onClick={onClick}
       variant="navtext"
       component="button"
     >
@@ -24,11 +25,17 @@ const TabItem = ({ text, active = false }) => {
     </Typography>
   );
 };
-const Tab = ({ items = [] }) => {
+const Tab = ({ items = [], activeIndex = 0, onClick }) => {
+  const handleClick = (index) => () => onClick(index);
   return (
     <Stack spacing="2.188rem" direction="row" component="div">
       {items.map((i, index) => (
-        <TabItem key={`TabItem-${index}-${i}`} text={i} />
+        <TabItem
+          key={`TabItem-${index}-${i}`}
+          active={activeIndex === index}
+          onClick={handleClick(index)}
+          text={i}
+        />
       ))}
     </Stack>
   );

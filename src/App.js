@@ -17,7 +17,7 @@ const App = () => {
       <Typography variant="navtext">nav text Hello</Typography>
       <Typography variant="body1">body Hello</Typography>
       <NavBar />
-      <Tab items={TAB_ITEMS} />
+      <Tab onClick={(i) => console.log(`tab index ${i}`)} items={TAB_ITEMS} />
       <DotSlider onClick={(i) => console.log(`dot index ${i}`)} quantity={4} />
     </Stack>
   );
