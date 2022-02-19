@@ -1,8 +1,15 @@
-import backgroundImg from '../assets/home/background-home-desktop.jpg';
+import bgImgDesktop from '../assets/home/background-home-desktop.jpg';
+import bgImgTablet from '../assets/home/background-home-tablet.jpg';
+import bgImgMobile from '../assets/home/background-home-mobile.jpg';
+
 import { ViewWrapper } from '../components';
 
 const HomeView = () => (
-  <ViewWrapper bgImg={backgroundImg}>I'm home</ViewWrapper>
+  <ViewWrapper
+    bgImg={{ laptop: bgImgDesktop, mobile: bgImgMobile, tablet: bgImgTablet }}
+  >
+    I'm home
+  </ViewWrapper>
 );
 
 const route = {
