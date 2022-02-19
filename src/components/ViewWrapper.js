@@ -6,6 +6,7 @@ const ViewWrapper = ({ bgImg, children }) => (
       backgroundImage: `url(${bgImg})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
+      pt: '13.25rem',
     }}
     component="main"
   >

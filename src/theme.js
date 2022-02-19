@@ -10,6 +10,13 @@ const theme = createTheme({
       default: '#0B0D17',
     },
   },
+  breakpoints: {
+    values: {
+      mobile: 0,
+      tablet: 768,
+      laptop: 1024,
+    },
+  },
   typography: {
     fontFamily: [
       'Barlow',
