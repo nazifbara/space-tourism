@@ -7,12 +7,12 @@ const Gutter = ({ children, right = false, big }) => {
         pl: {
           mobile: '1.5rem',
           tablet: '3.063rem',
-          laptop: big ? '10.313rem' : '3.438rem',
+          laptop: big ? '8.5rem' : '3.438rem',
         },
         pr: {
           mobile: '1.5rem',
-          tablet: 0,
-          laptop: right && big ? '10.313rem' : 0,
+          tablet: right ? '3.063rem' : 0,
+          laptop: right && big ? '8.5rem' : 0,
         },
       }}
       component="div"

@@ -14,7 +14,7 @@ const Header = () => {
       sx={{
         width: '100%',
         zIndex: 1,
-        position: 'absolute',
+        position: 'fixed',
         py: {
           mobile: '1.5rem',
           tablet: 'initial',

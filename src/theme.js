@@ -41,7 +41,7 @@ const theme = createTheme({
       textTransform: 'uppercase',
     },
     h4: {
-      fontSize: '3rem',
+      fontSize: '2rem',
       fontFamily: 'Bellefair',
       textTransform: 'uppercase',
     },
@@ -71,8 +71,46 @@ const theme = createTheme({
     },
     body1: {
       fontSize: '1.125rem',
+      lineHeight: '2rem',
     },
   },
 });
+
+theme.typography.h1 = {
+  ...theme.typography.h1,
+  [theme.breakpoints.down('tablet')]: {
+    fontSize: '6.25rem',
+  },
+};
+
+theme.typography.h4 = {
+  ...theme.typography.h4,
+  [theme.breakpoints.down('tablet')]: {
+    fontSize: '1.25rem',
+  },
+};
+
+theme.typography.h5 = {
+  ...theme.typography.h5,
+  [theme.breakpoints.down('tablet')]: {
+    fontSize: '1rem',
+    letterSpacing: '0.169rem',
+  },
+  [theme.breakpoints.down('laptop')]: {
+    fontSize: '1.25rem',
+    letterSpacing: '0.211rem',
+  },
+};
+
+theme.typography.body1 = {
+  ...theme.typography.body1,
+  [theme.breakpoints.down('tablet')]: {
+    fontSize: '0.938rem',
+  },
+  [theme.breakpoints.down('laptop')]: {
+    fontSize: '1rem',
+    lineHeight: '1.563rem',
+  },
+};
 
 export default theme;

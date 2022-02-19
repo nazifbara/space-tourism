@@ -10,7 +10,16 @@ const ViewWrapper = ({ bgImg, children }) => (
       },
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      pt: '13.25rem',
+      backgroundAttachment: 'fixed',
+      pt: {
+        mobile: '7rem',
+        tablet: '13.25rem',
+      },
+      pb: {
+        mobile: '3rem',
+        tablet: '5.625rem',
+        laptop: '8.25rem',
+      },
     }}
     component="main"
   >
