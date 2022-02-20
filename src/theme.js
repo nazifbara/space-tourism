@@ -76,10 +76,28 @@ const theme = createTheme({
   },
 });
 
+theme.typography.navtext = {
+  ...theme.typography.navtext,
+  [theme.breakpoints.down('tablet')]: {
+    fontSize: '0.875rem',
+    letterSpacing: '0.148rem',
+  },
+};
+
 theme.typography.h1 = {
   ...theme.typography.h1,
   [theme.breakpoints.down('tablet')]: {
-    fontSize: '6.25rem',
+    fontSize: '5rem',
+  },
+};
+
+theme.typography.h2 = {
+  ...theme.typography.h2,
+  [theme.breakpoints.down('laptop')]: {
+    fontSize: '5rem',
+  },
+  [theme.breakpoints.down('tablet')]: {
+    fontSize: '3.5rem',
   },
 };
 
@@ -92,24 +110,24 @@ theme.typography.h4 = {
 
 theme.typography.h5 = {
   ...theme.typography.h5,
-  [theme.breakpoints.down('tablet')]: {
-    fontSize: '1rem',
-    letterSpacing: '0.169rem',
-  },
   [theme.breakpoints.down('laptop')]: {
     fontSize: '1.25rem',
     letterSpacing: '0.211rem',
+  },
+  [theme.breakpoints.down('tablet')]: {
+    fontSize: '1rem',
+    letterSpacing: '0.169rem',
   },
 };
 
 theme.typography.body1 = {
   ...theme.typography.body1,
-  [theme.breakpoints.down('tablet')]: {
-    fontSize: '0.938rem',
-  },
   [theme.breakpoints.down('laptop')]: {
     fontSize: '1rem',
     lineHeight: '1.563rem',
+  },
+  [theme.breakpoints.down('tablet')]: {
+    fontSize: '0.938rem',
   },
 };
 
