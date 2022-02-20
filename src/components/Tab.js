@@ -28,7 +28,11 @@ const TabItem = ({ text, active = false, onClick }) => {
 const Tab = ({ items = [], activeIndex = 0, onClick }) => {
   const handleClick = (index) => () => onClick(index);
   return (
-    <Stack spacing="2.188rem" direction="row" component="div">
+    <Stack
+      spacing={{ mobile: '1.625rem', tablet: '2.188rem' }}
+      direction="row"
+      component="div"
+    >
       {items.map((i, index) => (
         <TabItem
           key={`TabItem-${index}-${i}`}
