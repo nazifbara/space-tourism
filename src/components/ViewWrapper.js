@@ -13,12 +13,8 @@ const ViewWrapper = ({ bgImg, children }) => (
       backgroundAttachment: 'fixed',
       pt: {
         mobile: '7rem',
-        tablet: '13.25rem',
-      },
-      pb: {
-        mobile: '3rem',
-        tablet: '5.625rem',
-        laptop: '8.25rem',
+        tablet: '8.5rem',
+        laptop: '13.25rem',
       },
     }}
     component="main"

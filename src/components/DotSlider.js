@@ -4,8 +4,8 @@ const DotSliderItem = ({ active = false, onClick }) => {
   return (
     <Box
       sx={{
-        width: '0.938rem',
-        height: '0.938rem',
+        width: { mobile: '0.625rem', laptop: '0.938rem' },
+        height: { mobile: '0.625rem', laptop: '0.938rem' },
         borderRadius: '50%',
         backgroundColor: active ? '#fff' : 'rgba(255, 255, 255, 0.1744)',
         border: 'none',
@@ -19,11 +19,16 @@ const DotSliderItem = ({ active = false, onClick }) => {
     />
   );
 };
-const DotSlider = ({ quantity, onClick, activeIndex = 0 }) => {
+const DotSlider = ({ quantity, onClick, activeIndex = 0, ...otherProps }) => {
   const handleClick = (index) => () => onClick(index);
 
   return (
-    <Stack spacing="1.5rem" direction="row" component="div">
+    <Stack
+      spacing={{ mobile: '1rem', laptop: '1.5rem' }}
+      direction="row"
+      component="div"
+      {...otherProps}
+    >
       {Array(quantity)
         .fill(0)
         .map((_, index) => (
