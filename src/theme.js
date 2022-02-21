@@ -101,10 +101,23 @@ theme.typography.h2 = {
   },
 };
 
+theme.typography.h3 = {
+  ...theme.typography.h3,
+  [theme.breakpoints.down('laptop')]: {
+    fontSize: '2.5rem',
+  },
+  [theme.breakpoints.down('tablet')]: {
+    fontSize: '1.5rem',
+  },
+};
+
 theme.typography.h4 = {
   ...theme.typography.h4,
+  [theme.breakpoints.down('laptop')]: {
+    fontSize: '1.5rem',
+  },
   [theme.breakpoints.down('tablet')]: {
-    fontSize: '1.25rem',
+    fontSize: '0.875rem',
   },
 };
 

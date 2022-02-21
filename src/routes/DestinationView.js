@@ -4,24 +4,9 @@ import { Stack, Typography } from '@mui/material';
 import bgImgDesktop from '../assets/destination/background-destination-desktop.jpg';
 import bgImgTablet from '../assets/destination/background-destination-tablet.jpg';
 import bgImgMobile from '../assets/destination/background-destination-mobile.jpg';
-import { Gutter, ViewWrapper, Tab } from '../components';
+import { Gutter, ViewWrapper, ViewHeading, Tab } from '../components';
 import data from '../data';
 import { Box } from '@mui/system';
-
-const ViewHeading = ({ index, children }) => (
-  <Typography mb="4rem" variant="h5" color="white">
-    <Typography
-      variant="h5"
-      color="rgba(255, 255, 255, 0.25)"
-      fontWeight="bold"
-      mr="1.25rem"
-      component="span"
-    >
-      {String(index + 1).padStart(2, '0')}
-    </Typography>
-    {children}
-  </Typography>
-);
 
 const DestinationView = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
