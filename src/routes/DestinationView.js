@@ -20,7 +20,7 @@ const DestinationView = () => {
       bgImg={{ laptop: bgImgDesktop, mobile: bgImgMobile, tablet: bgImgTablet }}
     >
       <Gutter right big>
-        <ViewHeading index={currentIndex}>Pick your destination</ViewHeading>
+        <ViewHeading index={1}>Pick your destination</ViewHeading>
         <Stack
           direction={{ mobile: 'column', laptop: 'row' }}
           spacing="3.313rem"
