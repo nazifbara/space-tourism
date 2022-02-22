@@ -5,7 +5,7 @@ const ITEMS = ['home', 'destination', 'crew', 'technology'];
 
 const NavItem = ({ index, text, path }) => {
   const { pathname } = useLocation();
-  const active = pathname === path;
+  const active = pathname === path || pathname === path + '/';
 
   return (
     <Typography
@@ -28,16 +28,13 @@ const NavItem = ({ index, text, path }) => {
           tablet: `0.188rem solid ${active ? 'currentcolor' : 'transparent'}`,
         },
 
-        '&:hover': {
+        '&:hover,&:active': {
           borderBottom: {
             mobile: 0,
             tablet: `0.188rem solid ${
               active ? 'currentcolor' : 'rgba(255, 255, 255, 0.521)'
             }`,
           },
-        },
-        '&:active': {
-          borderBottom: 0,
         },
       }}
       variant="navtext"
