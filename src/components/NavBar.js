@@ -3,7 +3,7 @@ import { useLocation, Link } from 'react-router-dom';
 
 const ITEMS = ['home', 'destination', 'crew', 'technology'];
 
-const NavItem = ({ index, text, path }) => {
+const NavItem = ({ index, text, path, onClose }) => {
   const { pathname } = useLocation();
   const active = pathname === path || pathname === path + '/';
 
@@ -39,6 +39,7 @@ const NavItem = ({ index, text, path }) => {
       }}
       variant="navtext"
       component={Link}
+      onClick={onClose}
       to={path}
     >
       <Typography
@@ -104,6 +105,7 @@ const NavBar = ({ showMenu = false, onClose }) => {
       {ITEMS.map((i, index) => (
         <NavItem
           key={`NavItem-${index}-${i}`}
+          onClose={onClose}
           index={index}
           text={i}
           path={i === 'home' ? '/' : `/${i}`}
