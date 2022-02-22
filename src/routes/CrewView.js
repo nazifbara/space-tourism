@@ -19,7 +19,7 @@ const CrewView = () => {
       bgImg={{ laptop: bgImgDesktop, mobile: bgImgMobile, tablet: bgImgTablet }}
     >
       <Gutter right big>
-        <ViewHeading>Meet your crew</ViewHeading>
+        <ViewHeading index={2}>Meet your crew</ViewHeading>
         <Stack
           height={{ tablet: '62vh' }}
           alignItems={{ mobile: 'center', laptop: 'start' }}

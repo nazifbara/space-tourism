@@ -3,6 +3,7 @@ import { Typography } from '@mui/material';
 const ViewHeading = ({ index, children }) => (
   <Typography
     mb={{ mobile: '2rem', tablet: '3.75rem', laptop: '4rem' }}
+    textAlign={{ mobile: 'center', tablet: 'left' }}
     variant="h5"
     color="white"
     component="h2"
@@ -14,7 +15,7 @@ const ViewHeading = ({ index, children }) => (
       mr="1.25rem"
       component="span"
     >
-      {String(index + 1).padStart(2, '0')}
+      {String(index).padStart(2, '0')}
     </Typography>
     {children}
   </Typography>

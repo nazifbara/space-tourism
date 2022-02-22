@@ -4,8 +4,8 @@ const NumberSliderItem = ({ active = false, onClick, number }) => {
   return (
     <Box
       sx={{
-        width: '5rem',
-        height: '5rem',
+        width: { mobile: '2.5rem', tablet: '3.75rem', laptop: '5rem' },
+        height: { mobile: '2.5rem', tablet: '3.75rem', laptop: '5rem' },
         borderRadius: '50%',
         backgroundColor: active ? '#fff' : 'transparent',
         color: active ? 'normal' : '#fff',
@@ -29,7 +29,11 @@ const NumberSlider = ({ quantity, onClick, activeIndex = 0 }) => {
   const handleClick = (index) => () => onClick(index);
 
   return (
-    <Stack spacing="2rem" component="div">
+    <Stack
+      direction={{ mobile: 'row', laptop: 'column' }}
+      spacing={{ mobile: '1rem', laptop: '2rem' }}
+      component="div"
+    >
       {Array(quantity)
         .fill(0)
         .map((_, index) => (
