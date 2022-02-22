@@ -1,11 +1,14 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Box, IconButton, Stack } from '@mui/material';
 
 import { NavBar, Gutter } from '.';
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const navigate = useNavigate();
 
+  const goHome = () => navigate('/');
   const openMenu = () => setShowMenu(true);
   const closeMenu = () => setShowMenu(false);
 
@@ -30,7 +33,7 @@ const Header = () => {
           direction="row"
           component="div"
         >
-          <Logo />
+          <Logo onClick={goHome} />
           <NavBar showMenu={showMenu} onClose={closeMenu} />
           <Hamburger onClick={openMenu} />
         </Stack>
