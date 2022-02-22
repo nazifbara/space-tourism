@@ -64,8 +64,6 @@ const TechnologyView = () => {
             </Box>
             <Box
               sx={{ display: { mobile: 'none', laptop: 'block' } }}
-              right={0}
-              bottom={0}
               maxWidth="32.188rem"
               mb="2.125rem"
               component="img"
